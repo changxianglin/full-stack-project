@@ -10,7 +10,7 @@ const con = mysql.createConnection({
 
 con.connect()
 
-const sql = 'select * from users;'
+const sql = `update users set realname='李四2' where username='lisi'`
 
 con.query(sql, (error, result) => {
     if(error) {
