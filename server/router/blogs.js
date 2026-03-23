@@ -1,0 +1,1 @@
+const { getList } = require('../controller/blogs')
