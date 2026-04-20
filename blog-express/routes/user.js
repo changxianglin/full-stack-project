@@ -3,6 +3,8 @@ var router = express.Router();
 
 router.post('/login', function(req, res, next) {
     const { username, password } = req.body
+    const result = login(username, password)
+    
     res.json({
         username,
         password,
