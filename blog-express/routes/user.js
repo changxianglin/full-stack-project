@@ -4,11 +4,15 @@ var router = express.Router();
 router.post('/login', function(req, res, next) {
     const { username, password } = req.body
     const result = login(username, password)
-    
-    res.json({
-        username,
-        password,
+    return result.then(data => {
+        if(data.username) {
+            
+        }
     })
+    // res.json({
+    //     username,
+    //     password,
+    // })
 });
 
 router.get('/sesion-test', (req, res, next) => {
