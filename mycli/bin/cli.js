@@ -1,15 +1,8 @@
 #! /usr/bin/env node
 const { program } = require('commander')
+const myHelp = require('../lib/core/help')
+const myCommander = require('../lib/core/myCommnder')
 
-program.option('-f --framwork <framwork>', 'set framwork')
-program
-.command('create <project> [other...]')
-.alias('crt')
-.description('create project')
-.action((project, args) => {
-    console.log(project)
-    console.log(args)
-})
-
-
+myHelp(program)
+myCommander(program)
 program.parse(process.argv)
